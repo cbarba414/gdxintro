@@ -16,7 +16,11 @@ public class AppHandler extends ApplicationAdapter {
 
 	TextureRegion subImg;
 	int x, y;
-
+	int[][] worldIntArray  = 	{{0,1,2,3,4,5},
+			{0,1,2,3,4,5},
+			{0,1,2,3,4,5},
+			{0,1,2,3,4,5},
+			{0,1,2,3,4,5}};
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
@@ -26,14 +30,25 @@ public class AppHandler extends ApplicationAdapter {
 // a bunch of texture regions
 */
 
-		x=0;
-		y=0;
+		x = 0;
+		y = 0;
+
+
 	}
 
 	@Override
 	public void render () {
 		ScreenUtils.clear(1, 0, 0, 1);
 		batch.begin();
+
+		for (int r = 0; r < worldIntArray.length; r++) {
+			for (int c = 0; c < worldIntArray[r].length; c++) {
+				batch.draw(TileHandler.getTileHandler().getWorldTileArray().get(worldIntArray [r][c]).getTexture(),c*64,Gdx.graphics.getHeight() - 64 - (r*64));
+
+			}
+		}
+
+		/*
 
 		for (int r = 0; r < Gdx.graphics.getHeight(); r+=64) {
 			for (int c = 0; c< Gdx.graphics.getWidth(); c+=64) {
@@ -42,7 +57,7 @@ public class AppHandler extends ApplicationAdapter {
 					x = 0;
 				}
 			}
-		}
+		} */
 
 		batch.end();
 
