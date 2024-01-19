@@ -4,7 +4,7 @@ public abstract class Tile {
     // static means that the fields exist outside the class
     // refernece without creating obj
 
-    // final: won't change, initialized and declared in ther same line
+    // final: won't change, initialized and declared in the same line
     public static final int ON_SCREEN_DEFAULT_WIDTH = 64, ON_SCREEN_DEFAULT_HEIGHT = 64;
     private int defaultWorldTileHeight, defaultWorldTileWidth, id;
     private String name;

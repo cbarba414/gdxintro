@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.bmhs.gdxintro.gfx.assets.Tile;
 import com.bmhs.gdxintro.gfx.utils.TileHandler;
 
 public class AppHandler extends ApplicationAdapter {
@@ -16,8 +17,8 @@ public class AppHandler extends ApplicationAdapter {
 
 	TextureRegion subImg;
 	int x, y;
-	int[][] worldIntArray  = 	{{1,0,0,1,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9},
-								{0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9},
+	int[][] worldIntArray  = 	{{1,0,0,1,1,1,1,010,0,1,1,0,0,9,9,9,9,9,9},
+								{0,6,3,0,1,1,1,1,0,3,6,0,1,9,9,9,9,9,9,9},
 								{0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9},
 								{0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9},
 								{0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9},
@@ -54,7 +55,7 @@ public class AppHandler extends ApplicationAdapter {
 
 		for (int r = 0; r < worldIntArray.length; r++) {
 			for (int c = 0; c < worldIntArray[r].length; c++) {
-				batch.draw(TileHandler.getTileHandler().getWorldTileArray().get(worldIntArray [r][c]).getTexture(),c*64,Gdx.graphics.getHeight() - 64 - (r*64));
+				batch.draw(TileHandler.getTileHandler().getWorldTileArray().get(worldIntArray [r][c]).getTexture(),c* Tile.ON_SCREEN_DEFAULT_WIDTH,Gdx.graphics.getHeight() - Tile.ON_SCREEN_DEFAULT_HEIGHT - (r*Tile.ON_SCREEN_DEFAULT_HEIGHT));
 
 			}
 		}
