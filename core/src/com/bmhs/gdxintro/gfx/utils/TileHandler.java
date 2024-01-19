@@ -32,36 +32,46 @@ public class TileHandler {
         worldTileArray.add (blackWorldTile);
 
 
-
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*1, spriteOnSheetHeight*0, spriteOnSheetWidth, spriteOnSheetHeight);
         WorldTile whiteWorldTile = new WorldTile (tempRegion, 1, "white");
         worldTileArray.add (whiteWorldTile);
 
 
-
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*2, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile redWorldTile = new WorldTile (tempRegion, 2, "red");
-        worldTileArray.add (redWorldTile);
-
+        WorldTile darkBrownWorldTile = new WorldTile (tempRegion, 2, "darkBrown");
+        worldTileArray.add (darkBrownWorldTile);
 
 
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*3, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile orangeWorldTile = new WorldTile (tempRegion, 3, "orange");
-        worldTileArray.add (orangeWorldTile);
-
+        WorldTile brownWorldTile = new WorldTile (tempRegion, 3, "brown");
+        worldTileArray.add (brownWorldTile);
 
 
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*4, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile yellowWorldTile = new WorldTile (tempRegion, 4, "yellow");
-        worldTileArray.add (yellowWorldTile);
+        WorldTile beigeWorldTile = new WorldTile (tempRegion, 4, "beige");
+        worldTileArray.add (beigeWorldTile);
 
 
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*5, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile greenWorldTile = new WorldTile (tempRegion, 5, "green");
-        worldTileArray.add (greenWorldTile);
+        WorldTile lightPinkWorldTile = new WorldTile (tempRegion, 5, "lightPink");
+        worldTileArray.add (lightPinkWorldTile);
 
 
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*6, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile darkBeigePinkWorldTile = new WorldTile (tempRegion, 6, "darkBeigePink");
+        worldTileArray.add (darkBeigePinkWorldTile);
 
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*7, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile brightPinkWorldTile = new WorldTile (tempRegion, 7, "brightPink");
+        worldTileArray.add (brightPinkWorldTile);
+
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*8, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile darkerPinkWorldTile = new WorldTile (tempRegion, 8, "darkerPink");
+        worldTileArray.add (darkerPinkWorldTile);
+
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*9, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile darkestPinkWorldTile = new WorldTile (tempRegion, 9, "darkestPink");
+        worldTileArray.add (darkestPinkWorldTile);
     }
     public static TileHandler getTileHandler () {
         if (tileHandler == null) {
