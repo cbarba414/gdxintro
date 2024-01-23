@@ -17,8 +17,10 @@ public class AppHandler extends ApplicationAdapter {
 
 	TextureRegion subImg;
 	int x, y;
+
+/*
 	int[][] worldIntArray  = 	{{1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0}, //done
-								{0,1,1,1,1,1,1,0,0,1,6,3,0,1,1,1,1,0,3,6}, // done
+								{0,1,1,1,1,1,1,0,0,0,6,3,0,1,1,1,1,0,3,6}, // done
 								{3,0,1,1,1,1,0,3,6,0,6,6,3,0,0,0,0,3,6,6}, // done
 								{6,3,0,0,0,0,3,6,6,0,6,6,3,3,3,4,4,4,4,6}, //done
 								{6,3,3,3,3,4,4,4,4,0,6,6,3,0,0,4,6,6,0,0}, //done
@@ -31,24 +33,40 @@ public class AppHandler extends ApplicationAdapter {
 								{1,1,1,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1}};
 
 
+*/
 
-
-
+int [][] worldIntArray = new int [12][20];
 
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+
+
+		setRandomArray();
 		// delete these
 		/*img = new Texture("primaryColorSheet.png");
 		subImg = new TextureRegion(TileHandler.getTileHandler().getWorldTileArray().get(0).getTexture(), 64, 0, 128,128);
 // a bunch of texture regions
 */
 
+		/*
+		pick a random [r][c] in array and drop one pixel
+		search out that pixel and r+1, r, r-1,...change their colors.
+		 */
 		x = 0;
 		y = 0;
 
 
 	}
+
+	private void setRandomArray () {
+		for (int r = 0; r < worldIntArray.length; r++) {
+			for (int c = 0; c < worldIntArray[r].length; c++) {
+				worldIntArray [r][c] = MathUtils.random(9);
+			}
+		}
+	}
+
 
 	@Override
 	public void render () {
