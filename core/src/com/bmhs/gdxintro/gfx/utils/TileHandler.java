@@ -19,13 +19,10 @@ public class TileHandler {
         // singleton, only one object, no one else will make an object
         worldTileArray = new Array <>();
 
-
         spriteOnSheetHeight = Tile.ON_SCREEN_DEFAULT_HEIGHT;
         spriteOnSheetWidth = Tile.ON_SCREEN_DEFAULT_WIDTH;
 
-
         Texture tempTexture = new Texture(primaryColorSheetPath);
-
 
         TextureRegion tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*2, spriteOnSheetHeight*0, spriteOnSheetWidth, spriteOnSheetHeight);
         WorldTile blackWorldTile = new WorldTile (tempRegion, 0, "black");
